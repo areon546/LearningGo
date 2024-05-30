@@ -2,6 +2,7 @@
 %q - strings
 %d - numbers
 %v - default formatting of the datatype
+%#v - default formatting, showing field value pairs
 
 
 
