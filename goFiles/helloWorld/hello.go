@@ -16,6 +16,7 @@ const (
 	freHelloPref = "Bonjour, "
 )
 
+// Says hello to the user in the inputted language
 func Hello(name string, language string) string {
 	if name == "" {
 		name = "world"
