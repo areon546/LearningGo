@@ -1,1 +1,0 @@
-https://gobyexample.com/for - a link containing various ways to use for in go
