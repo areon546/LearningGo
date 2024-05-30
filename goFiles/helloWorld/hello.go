@@ -1,10 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println(Hello("world", ""))
-}
+package hello
 
 const (
 	engHelloPref = "Hello, "

@@ -17,11 +17,12 @@ func TestCut(t *testing.T) {
 
 func TestFields(t *testing.T) {
 	input := "Test sentence"
-	result := strings.Fields(input)
-	// expected := ""
+	result := strings.Fields(input)[:2]
+	expected := []string{"Test", "Sentence"}
 
-	fmt.Print(result)
-
+	if expected != result {
+		t.Errorf("expected %q, got %q", expected, result)
+	}
 }
 
 func ExampleCut() {
