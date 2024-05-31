@@ -28,14 +28,6 @@ in GO:
 
 i feel like i should spend more time on arrays here
 
-## Formatting
-[link on formatting](https://pkg.go.dev/fmt)
-%q - strings
-%d - numbers
-%v - default formatting of the datatype
-%#v - default formatting, showing field value pairs
-
-
 ## Structs
 
 - structs are how GO handles datatype development
@@ -44,12 +36,73 @@ There exists something called table driven tests, where you create test cases th
 
 By default, VSCode does it in GO by generating a slice of anonymous structs {basically a datastructure made with no specific name to it, only such that it can be used locally}. Technically you have more freedom in how you do it, but this is a very neat way of doing it. 
 
-## Pointers
+There are 2 ways to create a datatype in GO:
+1. ```type ND struct {
+        aND int
+        b string
+} ```
+2. ```type NDS datatype ```
+
+The second is used if you dont wanna create any unique functionality but wanna call it a different thing for type safety and the like. 
+
+The first is basically used to create classes, however, you cannot create methods in that way. You need to do the following for methods:
+
+```go
+func (n ND) fName(...params) (...returnTypes) {}
+```
+outside of the struct declaration. 
+
+To assign values to a datatype, 
+1. int(1) can be used
+2. ND{a, b} can be used - more for structs, I presume it uses order of usage or assignment via aND:a and so on
+3. var ndVar NDS = datatype() (implicitly or explicitly)
+
+
+
+
+
+
+
+
+
+
+
+
+# Formatting
+[link on formatting](https://pkg.go.dev/fmt)
+%q - strings
+%d - numbers
+%v - default formatting of the datatype
+%#v - default formatting, showing field value pairs
+%T - datatype
+
+
 
 # Pointers
 prefixxes to datatypes:
 `*` - pass by pointer, lets you edit the original values, not a copy
 nothing - copies value, no pointer schenanigans
 `&` - the memory location of the variable
+`*&` - the * makes the compiler use the following section as the pointer to a spot, the & makes the section a mem address, essentially a pointer, so `*&` is like doing nothing
 
 # Dereferencing pointers
+- dereferencing pointers and referencing values is a way of moving around through memory addresses through the use of  stuff like `*` and `&`, `*` being the pointer, `&` being the memory address. im still not entirely sure what they mean
+
+    | Memory Address | Value |
+a = | 100            | 200   |
+    | 200            | 300   |
+    | 300            | 100   |
+
+a = 200
+&a = 100
+*&a = 300
+
+
+
+
+
+
+
+
+&*a = 300 (i think)
+<!-- \*&\*a =  -->
