@@ -58,7 +58,15 @@ To assign values to a datatype,
 3. var ndVar NDS = datatype() (implicitly or explicitly)
 
 
+## Maps
 
+- interesting feature of maps: 
+- can be nil
+    - nil maps can be read from and return that there is nothing there, but NEVER write to a nil map
+    - \therefore always initialise a map
+        - eg use make(map[string]string, or map[string]string{})
+- can return 2 values
+    - value, found := m["key"], value being the value stored at "key" (if there is one, else it returns ""), and found being a bool of whether it is found
 
 
 
@@ -85,7 +93,7 @@ nothing - copies value, no pointer schenanigans
 `&` - the memory location of the variable
 `*&` - the * makes the compiler use the following section as the pointer to a spot, the & makes the section a mem address, essentially a pointer, so `*&` is like doing nothing
 
-# Dereferencing pointers
+## Dereferencing pointers
 - dereferencing pointers and referencing values is a way of moving around through memory addresses through the use of  stuff like `*` and `&`, `*` being the pointer, `&` being the memory address. im still not entirely sure what they mean
 
     | Memory Address | Value |
@@ -98,6 +106,10 @@ a = 200
 *&a = 300
 
 
+# Errors
+- you should be creating errors when testing
+- better to have precise errors than reuse errors
+- errors are not always necessary, when testing, think whether an error actually matters or not
 
 
 
