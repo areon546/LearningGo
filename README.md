@@ -68,6 +68,11 @@ To assign values to a datatype,
 - can return 2 values
     - value, found := m["key"], value being the value stored at "key" (if there is one, else it returns ""), and found being a bool of whether it is found
 
+## Dependency Injection
+- you can do pretty cool things with this, such as rerouting where your print statements go!! this is very neat and useful
+- i wonder what other applications of DI exist
+- the idea is, you have set methods that you use that are calling specific methods that can realistically put information anywhere a specific interface is implemented
+    - using this method, you can create your own methods that will do this, eg printing somewhere else
 
 
 
