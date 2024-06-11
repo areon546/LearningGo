@@ -2,12 +2,15 @@ package main
 
 import (
 	"os"
+	"time"
 
-	"github.com/areon546/LearningGo/goFiles/injection"
+	"github.com/areon546/LearningGo/goFiles/mocking"
 )
 
 func main() {
-	injection.Greet(os.Stdout, "Chris")
+	durationA := 1 * time.Second
+	sleeper := &mocking.ConfigSleeper{durationA, time.Sleep}
+	mocking.Countdown(os.Stdout, sleeper)
 
 	// var err error // initial value is nil
 	// fmt.Println(err.Error()) //

@@ -73,6 +73,20 @@ To assign values to a datatype,
 - i wonder what other applications of DI exist
 - the idea is, you have set methods that you use that are calling specific methods that can realistically put information anywhere a specific interface is implemented
     - using this method, you can create your own methods that will do this, eg printing somewhere else
+- I want to learn more about how to use DI. 
+
+## Mocking
+- mocking lets you test out a function that would take a lot of resources with fewer resources
+- eg
+    - test out a database with a test version of said database
+    - test out output with a delay with a DId version of output
+- it is a way of writing code alongside Dependency Injection that makes it easier and simpler to write tests for certain bits of software
+- i dont fully understand so i need more experience and usage of it to find out more
+
+- note: when testing, test functionality, rather than implementation, unless implementation is important
+
+- ask:
+    - am i testing behaviour or implementation details?
 
 
 
