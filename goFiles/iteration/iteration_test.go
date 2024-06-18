@@ -22,6 +22,7 @@ func ExampleRepeat() {
 }
 
 func BenchmarkRepeat(b *testing.B) {
+	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		Repeat("a", 5)
 	}
