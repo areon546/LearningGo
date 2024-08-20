@@ -1,23 +1,29 @@
 package main
 
 import (
-	"os"
-	"time"
+	"fmt"
 
-	"github.com/areon546/LearningGo/goFiles/mocking"
+	"github.com/areon546/LearningGo/goFiles/concurrency"
 )
 
 func main() {
-	durationA := 1 * time.Second
-	sleeper := &mocking.ConfigSleeper{durationA, time.Sleep}
-	mocking.Countdown(os.Stdout, sleeper)
+	// concurrencyF()
+}
 
-	// var err error // initial value is nil
-	// fmt.Println(err.Error()) //
+func concurrencyF() {
+	urls := []string{"1", "2"}
+	concurrency.LoopWebsites(urls)
+}
 
-	//
-	// input := "Test sentence"
-	// fmt.Println(strings.Fields(input)[0])
+func mockingF() {
+	// durationA := 1 * time.Second
+	// sleeper := &mocking.ConfigSleeper{durationA, time.Sleep}
+	// mocking.Countdown(os.Stdout, sleeper)
+	return
+}
 
-	// fmt.Println(Hello("world", ""))
+func LoopWebsites(urls []string) {
+	for index, value := range urls {
+		fmt.Println(index, value)
+	}
 }
